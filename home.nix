@@ -102,7 +102,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ll = "ls -lah";
+      ls = "eza";
+      ll = "eza -lah";
       vim = "nvim";
       vi = "nvim";
       update = "sudo nixos-rebuild switch";
