@@ -73,6 +73,9 @@
     extraConfig = {
       init.defaultBranch = "main";
     };
+    aliases = {
+      s = "status";
+    };
   };
 
   programs.starship = {
