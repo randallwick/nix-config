@@ -107,6 +107,10 @@
       vim = "nvim";
       vi = "nvim";
       update = "sudo nixos-rebuild switch";
+      ".." = "cd ..";
+      "..." = "cd ../..";
+      "...." = "cd ../../..";
+      "....." = "cd ../../../..";
     };
 
     history = {
