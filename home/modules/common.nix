@@ -1,0 +1,5 @@
+{outputs, ...}: {
+  imports = [
+    ./neovim.nix
+  ];
+}

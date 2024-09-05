@@ -2,8 +2,9 @@
   description = "A simple NixOS flake";
 
   inputs = {
-    # NixOS official package source, using the nixos-unstable branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # NixOS official package source, using the nixos-24.05 branch here
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:nixos/inxpkgs/nixos-unstable";
     helix.url = "github:helix-editor/helix/master";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
@@ -11,7 +12,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { 
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @inputs: let 
+    inherit (self) outputs;
+
+    in {
     # Please replace my-nixos with your hostname
     nixosConfigurations.stilicho = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -29,5 +38,7 @@
 	}
       ];
     };
+
+    overlays = import ./overlays {inherit inputs;};
   };
 }

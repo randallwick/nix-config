@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./home/modules/common.nix
+  ];
+
   home.username = "randall";
   home.homeDirectory = "/home/randall";
 
@@ -106,8 +110,8 @@
     shellAliases = {
       ls = "eza";
       ll = "eza -lah";
-      vim = "nvim";
-      vi = "nvim";
+      # vim = "nvim";
+      # vi = "nvim";
       update = "sudo nixos-rebuild switch";
       ".." = "cd ..";
       "..." = "cd ../..";
