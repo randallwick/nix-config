@@ -142,7 +142,7 @@
     git
     wget
     curl
-    inputs.helix.packages."${pkgs.system}".helix
+    gcc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
