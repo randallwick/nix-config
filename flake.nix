@@ -4,7 +4,7 @@
   inputs = {
     # NixOS official package source, using the nixos-24.05 branch here
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
-    nixpkgs-unstable.url = "github:nixos/inxpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     helix.url = "github:helix-editor/helix/master";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
