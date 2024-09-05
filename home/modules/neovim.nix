@@ -18,7 +18,7 @@ in {
       nixd
       nodePackages.bash-language-server
       nodePackages.prettier
-      spellcheck
+      shellcheck
       shfmt
       stylua
       vscode-langservers-extracted
