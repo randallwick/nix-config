@@ -24,7 +24,7 @@
     # Please replace my-nixos with your hostname
     nixosConfigurations.stilicho = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs outputs; };
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
