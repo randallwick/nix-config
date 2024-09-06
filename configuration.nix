@@ -23,7 +23,18 @@
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     kernelPackages = pkgs.linuxPackages_latest;
-    plymouth.enable = true;
+
+    plymouth = {
+      enable = true;
+      theme = "tech_b";
+      themePackages = with pkgs; [
+        # prevent loading all themes
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "tech_b" ];
+        })
+      ];
+    };
+
     initrd.verbose = false;
     consoleLogLevel = 0;
     kernelParams = [
