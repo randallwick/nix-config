@@ -6,7 +6,6 @@ in {
     settings = {
       env.TERM = "xterm-256color";
       font = {
-				name = "FiraCode";
         size = 14;
       };
       colors.draw_bold_text_with_bright_colors = true;
