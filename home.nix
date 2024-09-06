@@ -70,8 +70,6 @@
     usbutils
   ];
 
-  programs.kitty.enable = true;
-
   programs.git = {
     enable = true;
     userName = "Randall Wick";
