@@ -1,6 +1,7 @@
 {pkgs, ...}: let
   example = "thing";
 in {
+  programs.fzf.enable = true;
   programs.zsh = {
     enable = true;
     enableCompletion = true;
