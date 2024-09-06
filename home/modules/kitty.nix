@@ -10,11 +10,13 @@ in {
 		};
 
     settings = {
-      background_opacity = "0.7";
+      background_opacity = "0.8";
       copy_on_select = "yes";
-      enable_audio_bell = "no";
-      shell = "zsh";
       editor = "nvim";
+      enable_audio_bell = "no";
+      hide_window_decorations = "yes";
+      shell = "zsh";
+      tab_bar_style = "powerline";
     };
 
 		shellIntegration = {
