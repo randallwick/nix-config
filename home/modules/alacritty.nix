@@ -8,7 +8,14 @@ in {
       font = {
         size = 14;
       };
+
       colors.draw_bold_text_with_bright_colors = true;
+
+      window = {
+        decorations = "None";
+        opacity = 0.8;
+      };
+
       scrolling.multiplier = 5;
       selection.save_to_clipboard = true;
     };
