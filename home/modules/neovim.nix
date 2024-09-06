@@ -26,6 +26,10 @@ in {
     ];
   };
 
+  extraLuaPackages = ls: with ls; [
+    luarocks
+  ];
+
   # source lua config from this repo
   xdg.configFile = {
     nvim = {
