@@ -24,11 +24,11 @@ in {
       vscode-langservers-extracted
       yaml-language-server
     ];
-  };
 
-  extraLuaPackages = ls: with ls; [
-    luarocks
-  ];
+    extraLuaPackages = ls: with ls; [
+      luarocks
+    ];
+  };
 
   # source lua config from this repo
   xdg.configFile = {
