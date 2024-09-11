@@ -168,6 +168,7 @@
   stylix.enable = true;
   stylix.image = ./static/wallpapers/cherry-blossom.jpg;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
+  stylix.polarity = "dark";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
