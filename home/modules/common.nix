@@ -6,6 +6,7 @@
 		./nerdfonts.nix
     ./neovim.nix
 		./starship.nix
+    ./stylix.nix
 		./zsh.nix
   ];
 }
