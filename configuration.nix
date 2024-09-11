@@ -4,8 +4,9 @@
 
 {
   config,
-  pkgs,
   inputs,
+  lib,
+  pkgs,
   outputs,
   ...
 }:
@@ -24,9 +25,9 @@
     loader.efi.canTouchEfiVariables = true;
     kernelPackages = pkgs.linuxPackages_latest;
 
-    plymouth = {
+    plymouth = with lib; {
       enable = true;
-      theme = "tech_b";
+      theme = mkForce "tech_b";
       themePackages = with pkgs; [
         # prevent loading all themes
         (adi1090x-plymouth-themes.override {
@@ -164,6 +165,7 @@
   ];
 
 
+  stylix.enable = true;
   stylix.image = ./static/wallpapers/cherry-blossom.jpg;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
 
