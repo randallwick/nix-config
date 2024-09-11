@@ -17,6 +17,7 @@ in {
       hide_window_decorations = "yes";
       shell = "zsh";
       tab_bar_style = "powerline";
+      window_padding_width = 5;
     };
 
 		shellIntegration = {
