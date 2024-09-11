@@ -68,6 +68,9 @@
     ethtool
     pciutils
     usbutils
+
+    # gui
+    xfce.thunar
   ];
 
   home.stateVersion = "24.05";
