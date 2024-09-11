@@ -163,6 +163,10 @@
     gcc
   ];
 
+
+  stylix.image = ./static/wallpapers/cherry-blossom.jpg;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
