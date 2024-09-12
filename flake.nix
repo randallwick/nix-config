@@ -37,6 +37,7 @@
         ./machines/stillicho/configuration.nix
 
         inputs.stylix.nixosModules.stylix
+        ./users/randall/stylix.nix
 
 	      home-manager.nixosModules.home-manager
         {
