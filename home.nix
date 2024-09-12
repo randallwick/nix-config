@@ -13,6 +13,7 @@
     fastfetch
 
     # terminal nav
+    base16-shell-preview
     eza
     fzf
     vifm-full
