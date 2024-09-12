@@ -10,7 +10,7 @@ in {
 
     shellAliases = {
       ls = "eza";
-      ll = "eza -lah";
+      ll = "eza -lah --icons=auto --classify=auto";
       update = "sudo nixos-rebuild switch";
       ".." = "cd ..";
       "..." = "cd ../..";
