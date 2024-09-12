@@ -27,10 +27,12 @@ in {
       enable = true;
       plugins = [
         { name = "zsh-users/zsh-autosuggestions"; } 
+        { name = "chriskempson/base16-shell"; }
       ];
     };
 
 		initExtra = ''
+      export BASE16_SHELL="$HOME/.zplug/repos/chriskempson/base16-shell/";
 		'';
   };
 }
