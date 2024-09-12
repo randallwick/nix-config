@@ -3,7 +3,7 @@
   stylix = {
     enable = true;
     image = ../../static/wallpapers/cherry-blossom.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/helios.yaml";
     cursor = {
       package = pkgs.phinger-cursors;
       name = "phinger-cursors-dark";
