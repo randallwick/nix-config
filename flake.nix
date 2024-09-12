@@ -34,7 +34,7 @@
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
-        ./configuration.nix
+        ./machines/stillicho/configuration.nix
 
         inputs.stylix.nixosModules.stylix
 
