@@ -20,7 +20,7 @@
       };
     };
     opacity = {
-      terminal = 0.8;
+      terminal = 0.85;
     };
     targets = {
       gtk.enable = true;
