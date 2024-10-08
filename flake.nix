@@ -9,6 +9,10 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-secrets = {
+      url = "git+ssh://git@github.com/randallwick/nix-secrets?shallow=1&ref=main";
+      flake = false;
+    };
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,10 +42,10 @@
       modules = [
         ./machines/stilicho/configuration.nix
 
-        sops-nix.nixosModules.sops
-
         stylix.nixosModules.stylix
         ./users/randall/stylix.nix
+
+        sops-nix.nixosModules.sops
 
 	      home-manager.nixosModules.home-manager
         {
