@@ -184,6 +184,24 @@
         "type": "github"
       }
     },
+    "nix-secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1728390827,
+        "narHash": "sha256-dBkt2xDjxdha+qYn/oei1dGwybWePEDk5DbcncQkGuM=",
+        "ref": "main",
+        "rev": "76ccc50a97660c80aa3d70d9578c48e8bb2d9489",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/randallwick/nix-secrets"
+      },
+      "original": {
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/randallwick/nix-secrets"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1725826545,
@@ -235,6 +253,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "nix-secrets": "nix-secrets",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "sops-nix": "sops-nix",
