@@ -24,12 +24,10 @@
     home-manager,
     ...
   } @inputs: let 
-    inherit (self) outputs;
-
-    in {
-    # Please replace my-nixos with your hostname
-    nixosConfigurations.stilicho = nixpkgs.lib.nixosSystem {
+      inherit (self) outputs;
       system = "x86_64-linux";
+    in {
+    nixosConfigurations.stilicho = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs outputs; };
       modules = [
         ./machines/stilicho/configuration.nix
