@@ -9,6 +9,10 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     stylix = {
       url = "github:danth/stylix/release-24.05";
       inputs = {
@@ -22,6 +26,8 @@
     self,
     nixpkgs,
     home-manager,
+    sops-nix,
+    stylix,
     ...
   } @inputs: let 
       inherit (self) outputs;
@@ -32,7 +38,9 @@
       modules = [
         ./machines/stilicho/configuration.nix
 
-        inputs.stylix.nixosModules.stylix
+        sops-nix.nixosModules.sops
+
+        stylix.nixosModules.stylix
         ./users/randall/stylix.nix
 
 	      home-manager.nixosModules.home-manager
