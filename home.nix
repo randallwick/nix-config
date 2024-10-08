@@ -58,6 +58,9 @@
     iotop
     iftop
 
+    # security
+    age
+
     # system call monitoring
     strace
     ltrace
