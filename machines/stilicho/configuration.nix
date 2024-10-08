@@ -9,13 +9,13 @@
   pkgs,
   outputs,
   ...
-}:
-
+}: let
+  secretspath = builtins.toString inputs.nix-secrets;
+in 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -119,12 +119,28 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  sops = {
+    defaultSopsFile = "${secretspath}/secrets.yaml";
+    defaultSopsFormat = "yaml";
+    age.keyFile = "/home/randall/.config/sops/age/keys.txt";
+
+    secrets = {
+      aws_access_key_id.owner = config.users.users.randall.name;
+      aws_secret_access_key.owner = config.users.users.randall.name;
+
+      randall_passwd = {
+        neededForUsers = true;
+      };
+    };
+  };
+
   users.defaultUserShell = pkgs.zsh;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.randall = {
     isNormalUser = true;
     description = "Randall";
+    hashedPasswordFile = config.sops.secrets.randall_passwd.path;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
@@ -164,6 +180,8 @@
     wget
     curl
     gcc
+    sops
+    nodejs_22
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
