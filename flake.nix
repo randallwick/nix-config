@@ -31,8 +31,8 @@
     ...
   } @inputs: let 
       inherit (self) outputs;
-      system = "x86_64-linux";
     in {
+    system = "x86_64-linux";
     nixosConfigurations.stilicho = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs outputs; };
       modules = [
