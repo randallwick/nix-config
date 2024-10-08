@@ -32,9 +32,7 @@
       system = "x86_64-linux";
       specialArgs = { inherit inputs outputs; };
       modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
-        ./machines/stillicho/configuration.nix
+        ./machines/stilicho/configuration.nix
 
         inputs.stylix.nixosModules.stylix
         ./users/randall/stylix.nix
