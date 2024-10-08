@@ -8,6 +8,7 @@
 		./nerdfonts.nix
     ./neovim.nix
 		./starship.nix
+		./secrets.nix
 		./zsh.nix
   ];
 }
